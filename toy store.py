@@ -41,3 +41,5 @@ Montant_depense = (int(cash_spent) - int(cash))
 print("Vous avez dépensé", Montant_depense, "$ au total pour", Montant_depense, "jouet!")
 print("Il vous reste maintenant", cash, "$")
 print("Merci beaucoup et bonne journée")
+
+

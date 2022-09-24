@@ -1,4 +1,10 @@
-fini = input("Voulez vous arreter de magasiner? Réponder en utulisant Y ou N respectivement: ")
-while fini not in ["Y", "N"]:
-    print("Cela est une touche invalide.")
-    fini = input("Voulez vous arreter de magasiner? Réponder en utulisant Y ou N respectivement: ")
+x = int(input("entrez un numbre x: "))
+n = int(input("Entrez un numbre n: "))
+
+resultat = 1
+i = 0
+
+while i < n:
+    resultat = resultat * x
+    i = i + 1
+print ("x exposant n vaut", resultat)

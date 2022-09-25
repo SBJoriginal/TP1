@@ -30,16 +30,16 @@ if continue_shopping == True:
       print("Welcome to MELIMELO groce54ory store! \n"
             "Select any of the items by inputing the letters corresponding to the item. \n"
             "You can type cart at any time to check what items you have selected \n"
-            "(A) Apple.........1.50$\n"
-            "(B) Banana........2.50$\n"
-            "(C) Chips.........4.75$\n"
-            "(D) Dumplings.....7.15$\n"
-            "(E) Egg...........2.30$\n"
-            "(F) Fries.........5.85$\n"
+            "(A) Apple(s).........1.50$\n"
+            "(B) Banana(s)........2.50$\n"
+            "(C) Chip(s).........4.75$\n"
+            "(D) Dumplings(s).....7.15$\n"
+            "(E) Egg(s)...........2.30$\n"
+            "(F) Frie(s).........5.85$\n"
             "(cart) View your cart")
 while continue_shopping == True:
       while continue_shopping == True:
-            product = input("Entrez la lettre du produit dont vous voulez: ")
+            product = input("Enter the letter of the prduct you would like: ")
             if (product == "A"):
                   A = A + 1
                   print("A")
@@ -94,7 +94,7 @@ while continue_shopping == True:
       continue_shopping = input("Do you want to keep shopping (yes or no): ")
       if continue_shopping == "yes":
             continue_shopping = True
-print("thank you for shopping wiht us\n"
+print("thank you for shopping with us\n"
       "Your total is", cart_total_price)
 
 

@@ -19,18 +19,17 @@ while fini == "N":
             print("Désoler! Vous n'avez plus d'argent")
             will_you_buy_one = "stop"
             fini = "Y"
-            break
-        cash = int(cash) - 1
-        Montant_depense = (int(cash_spent) - int(cash))
-        print("il vous reste", cash, "$")
-        print("Vous avez dépensé", Montant_depense, "$")
-        will_you_buy_one = input(
-            "Si vous voulez acheter un jouet pour 1$, pesez n'importe quelle touche et ENTER, sinon écrivez 'stop' et puis pesez la touche ENTER: ")
-        if (cash <= 0):
-            print("Désoler! Vous n'avez plus d'argent")
-            will_you_buy_one = "stop"
-            fini = "Y"
-
+        else:
+            cash = int(cash) - 1
+            Montant_depense = (int(cash_spent) - int(cash))
+            print("il vous reste", cash, "$")
+            print("Vous avez dépensé", Montant_depense, "$")
+            will_you_buy_one = input(
+                "Si vous voulez acheter un jouet pour 1$, pesez n'importe quelle touche et ENTER, sinon écrivez 'stop' et puis pesez la touche ENTER: ")
+            if (cash <= 0):
+                print("Désoler! Vous n'avez plus d'argent")
+                will_you_buy_one = "stop"
+                fini = "Y"
     if (fini != "Y"):
         fini = input("Voulez-vous arrêter de magasiner? Répondre en utilisant Y ou N respectivement: ")
         while fini not in ["Y", "N"]:

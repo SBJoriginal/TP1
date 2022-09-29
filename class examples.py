@@ -8,3 +8,10 @@ if not erreur_embauche:
     print("annees de travail: ", anciennete)
 else:
     print("erreur")
+
+
+
+
+seq_noms = ("Pier", "Jean", "Jacques")
+for nom in seq_noms:
+    print("Bonjour", nom, "!")

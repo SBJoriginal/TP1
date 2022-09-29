@@ -1,8 +1,8 @@
 #Configuration de la pompe à essence
-prix_essence_ordinaire = float(input("Quel est le prix de l’essence ordinaire en ($/L) : "))
-prix_essence_diesel = float(input("Quel est le prix de l’essence diesel en ($/L) : "))
+prix_essence_ordinaire = 1.2 #float(input("Quel est le prix de l’essence ordinaire en ($/L) : "))**********************
+prix_essence_diesel = 1.3 #float(input("Quel est le prix de l’essence diesel en ($/L) : "))**********************
 prix_essence_super = (prix_essence_ordinaire * 1.1)
-code_secret_du_jour = input("Quel est le code secret du jour : ")
+code_secret_du_jour = "yes1" #input("Quel est le code secret du jour : ")*********************************************
 choix_dessence = False
 choix_plein_ou_fixe = False
 mettre_essence = True
@@ -17,7 +17,7 @@ O = prix_essence_ordinaire
 S = prix_essence_super
 D = prix_essence_diesel
 
-#DONT FORGET TO REMOVE THIS WHEN YOUR FINISHED
+#DONT FORGET TO REMOVE THIS WHEN YOUR FINISHED*********************************
 print(prix_essence_ordinaire)
 print(prix_essence_diesel)
 print(code_secret_du_jour)
@@ -25,8 +25,8 @@ print(code_secret_du_jour)
 print("∗∗∗∗∗∗∗∗∗∗\n"
       "une automobile arrive.")
 #Arrivée d’une automobile
-litre_dans_le_reservoir_total = float(input("La nombre de litres total de ton réservoir est : "))
-litre_dans_le_reservoir_avant = float(input("La nombre de litres actuel de ton rérsvoir est : ")) #make sure its lower then total
+litre_dans_le_reservoir_total = 100 #float(input("La nombre de litres total de ton réservoir est : "))
+litre_dans_le_reservoir_avant = 90.7 #float(input("La nombre de litres actuel de ton rérsvoir est : ")) #make sure its lower then total
 print("La nombre de litres total de ton réservoir est : ", litre_dans_le_reservoir_total, "\n"
       "et il en contient actuellement : ", litre_dans_le_reservoir_avant)
 
@@ -38,7 +38,8 @@ print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       "-  [O] ordinaire : ",prix_essence_ordinaire, "$ / litre \n"
       "-  [S] uper : ",round(prix_essence_super, 2), "$ / litre \n"
       "-  [D] iesel : ",prix_essence_diesel, "$ / litre ")
-
+choix_dessence = True #REMOVE THIS DONT FORGET OR EVERYTHING WILL SUCK FOR EVER PLEASE DONT FORGET LOL*************
+essence_type = "O" #REMOVE THIS TOO ******************************************************************
 while choix_dessence == False:
       essence_type = input("Votre choix (O, S, D) : ")
       if essence_type.lower() == "o":
@@ -55,17 +56,19 @@ while choix_dessence == False:
 
 
 
+
 #Demander le plein ou un montant fixe
 while choix_plein_ou_fixe == False:
-      plein_ou_fixe = input("Souhaitez-vous faire le plein (P) ou choisir un montant fixe (M) ? ")
-      if (plein_ou_fixe == "P"):
+      plein_ou_fixe = "P" #input("Souhaitez-vous faire le plein (P) ou choisir un montant fixe (M) ? ")***********
+      if (plein_ou_fixe.lower() == "p"):
             choix_plein_ou_fixe = True
       else:
-            if (plein_ou_fixe == "M"):
+            if (plein_ou_fixe.lower() == "m"):
                   choix_plein_ou_fixe = True
             else:
                   print("Cela est un choix invalid! Veuillez essayer encore S.V.P!")
 
+#Remplissage litre par litre
 print("Remplissage!") #need to account for negative numbers
 litre_en_mettant_le_gas = litre_dans_le_reservoir_avant
 while mettre_essence == True:
@@ -137,6 +140,7 @@ while mettre_essence == True:
       if (plein_ou_fixe == "M"):
             total_prix_desirer = float(input("Veuillez inscrire le montant souhaité : "))
             mettre_l = input("Appuyez sur entrée pour ajounter un litre (A pour arrêter).")
+
             if (mettre_l == ""):
                   #did not do 5$ part yet
                   if (litre_en_mettant_le_gas < litre_dans_le_reservoir_total) and (litre_en_mettant_le_gas > litre_dans_le_reservoir_total - 1):
@@ -197,7 +201,7 @@ while mettre_essence == True:
             if (mettre_l == "A"):
                   mettre_essence = False
 
-print("bitchass")
+print("OUT OF LOOP")
 
 
 if (mettre_l == "A"):
@@ -209,6 +213,6 @@ else:
 
 
 
-#Remplissage litre par litre
+
 #Entrer un code promotionnel
 #Affichage final

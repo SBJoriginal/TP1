@@ -212,3 +212,43 @@ else:
 #Remplissage litre par litre
 #Entrer un code promotionnel
 #Affichage final
+
+
+if (plein_ou_fixe == "M"):
+      total_prix_desirer = float(input("Veuillez inscrire le montant souhaité : "))
+      mettre_l = input("Appuyez sur entrée pour ajounter un litre (A pour arrêter).")
+
+      if (mettre_l == ""):
+            if (litre_dans_le_reservoir_total - litre_en_mettant_le_gas) / 1 <= (
+                    total_prix_desirer - prix_gas) / prix_essence:
+                  prix_en_premier = False
+            if prix_en_premier == False:
+                  # when gas will fill first
+                  if (litre_en_mettant_le_gas < litre_dans_le_reservoir_total) and (
+                          litre_en_mettant_le_gas > litre_dans_le_reservoir_total - 1):
+                        final_l = litre_dans_le_reservoir_total - litre_en_mettant_le_gas
+                        prix_gas = prix_gas + prix_essence
+                        litre_en_mettant_le_gas = litre_en_mettant_le_gas + final_l
+                        print("État du réservoir d'essence : ", litre_en_mettant_le_gas, "sur",
+                              litre_dans_le_reservoir_total, "\n"
+                                                             "Coût (jusqu'à maintenant) : ", round(prix_gas, 2), "$")
+
+                  # il rest moin que un litre de place
+                  if (litre_en_mettant_le_gas + 1 <= litre_dans_le_reservoir_total):
+                        litre_en_mettant_le_gas = litre_en_mettant_le_gas + 1
+                        prix_gas = prix_gas + prix_essence
+                        print("État du réservoir d'essence : ", litre_en_mettant_le_gas, "sur",
+                              litre_dans_le_reservoir_total, "\n"
+                                                             "Coût (jusqu'à maintenant) : ", round(prix_gas, 2), "$")
+
+                  if (litre_en_mettant_le_gas >= litre_dans_le_reservoir_total):
+                        mettre_essence = False
+            if prix_en_premier == True:
+                  # when money limit will fill up first
+                  if (prix_gas + prix_essence <= total_prix_desirer):
+                  # do a full liter
+                  if (prix_gas + prix_essence > total_prix_desirer):
+            # how much money is left by substracting by our max
+
+      if (mettre_l == "A"):
+            mettre_essence = False

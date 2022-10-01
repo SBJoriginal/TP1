@@ -18,7 +18,7 @@ while negative_number == True or gas_float == False:
         else:
             negative_number = False
     else:
-        print("Cela est un choix invalid! Veuillez essayer encore S.V.P.!")
+        print("Cela est un choix invalid! Assurez-vous d'utiliser un [.] et non un [,] pour les nombres décimaux. Veuillez essayer encore S.V.P.!")
 #les donnees pour le TP
 car_never_stop_coming = True
 prix_essence_super = (prix_essence_ordinaire * 1.1)
@@ -45,7 +45,7 @@ while car_never_stop_coming == True:
       negative_number_litre = True
       litre_float = False
       capacite_impossible = True
-
+#rajouter la ,
       while negative_number_litre == True or litre_float == False or capacite_impossible == True:
             negative_number_litre = True
             litre_float = False
@@ -70,7 +70,7 @@ while car_never_stop_coming == True:
                               else:
                                     capacite_impossible = False
             else:
-                  print("Cela est un choix invalid! Veuillez essayer encore S.V.P!")
+                  print("Cela est un choix invalid! Assurez-vous d'utiliser un [.] et non un [,] pour les nombres décimaux. Veuillez essayer encore S.V.P!")
 
       #Demander le type d’essence
       print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n"

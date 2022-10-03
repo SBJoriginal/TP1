@@ -45,7 +45,7 @@ while car_never_stop_coming == True:
       negative_number_litre = True
       litre_float = False
       capacite_impossible = True
-#rajouter la ,
+
       while negative_number_litre == True or litre_float == False or capacite_impossible == True:
             negative_number_litre = True
             litre_float = False
@@ -121,7 +121,7 @@ while car_never_stop_coming == True:
 
                         choix_plein_ou_fixe = True
                   else:
-                        print("Cela est un choix invalide! Veuillez essayer encore S.V.P.!")
+                        print("Cela est un choix invalide! Assurez-vous d'utiliser un [.] et non un [,] pour les nombres décimaux. Veuillez essayer encore S.V.P.!")
 
       #Remplissage litre par litre
       print("Remplissage!")
@@ -137,9 +137,8 @@ while car_never_stop_coming == True:
                               final_l = litre_dans_le_reservoir_total - litre_en_mettant_le_gas
                               litre_en_mettant_le_gas = litre_en_mettant_le_gas + final_l
                               prix_gas = prix_gas + (prix_essence * final_l)
-                              print("État du réservoir d'essence : ", litre_en_mettant_le_gas, "sur",
-                                    litre_dans_le_reservoir_total, "\n"
-                                                                   "Coût (jusqu'à maintenant) : ", round(prix_gas, 2), "$")
+                              print("État du réservoir d'essence : ", litre_en_mettant_le_gas, "sur",litre_dans_le_reservoir_total, "\n"
+                                    "Coût (jusqu'à maintenant) : ", round(prix_gas, 2), "$")
                         #il reste au moins 1 litre
                         if (litre_en_mettant_le_gas <= litre_dans_le_reservoir_total - 1):
                               litre_en_mettant_le_gas = litre_en_mettant_le_gas + 1
